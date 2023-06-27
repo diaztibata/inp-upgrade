@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;900&display=swap');
+
+
+$primary-font: 'Montserrat', sans-serif;
+
+$black: #101827;
+$white: #fff;
+$lightgrey: #dcdcdc;
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $primary-font;
+    transition: .5s;
+}
+
+fieldset{
+    border: solid 0 transparent;
+    padding: 0;
+    margin-bottom: 16px;
+}
+
+label{
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+}
+input{
+    border: solid 1px $lightgrey;
+    border-radius: 5px;
+    padding: 8px 12px;
+    width: 100%;
+}
+
+input[type="checkbox"]{
+    opacity: .5;
+    width: 20px;
+}
+
+textarea{
+    width: 100%;
+    height: 200px;
+}
+
+.dropdown-button-and-list{
+    position: relative;
+    width: 100%;
+    button{
+        cursor: pointer;
+        padding: 8px 12px;
+        width: 100%;
+        font-weight: 600;
+        text-align: left;
+        position: relative;
+        &:after{
+            content: "";
+            width: 7px;
+            height: 7px;
+            border-bottom: solid 2px $black;
+            border-left: solid 2px $black;
+            display: block;
+            position: absolute;
+            top: calc(50% - 6px);
+            right: 15px;
+            transform: rotate(-45deg);
+        }
+    }
+    ul{
+        position: absolute;
+        padding: 0;
+        width: 100%;
+        overflow: hidden;
+        max-height: 0;
+        background: $white;
+        border: solid 0 transparent;
+        li{
+            list-style: none;
+            padding: 4px 8px;
+            font-size: 14px;
+            &:hover{
+                background-color: $black;
+                color: $white;
+                cursor: pointer;
+            }
+        }
+    }
+    &.show{
+        ul{
+            display: block;
+            max-height: 1000px;
+            border: solid 1px $lightgrey;
+        }
+    }
+}
+
+.aside-dialog{
+    background: rgba(0,0,0,.6);
+    position: fixed;
+    z-index:99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    .aside-content{
+        background: $white;
+        width: 100%;
+        max-width: 420px;
+        height: 100%;
+        overflow: scroll;
+        .aside-header{
+            background-color: $black;
+            padding: 16px;
+            display: flex;
+            gap: 16px;
+            justify-content: space-between;
+            align-items: center;
+            .aside-tittle{
+                font-weight: 600;
+                background-color: transparent;
+                color: $white;
+            }
+            .close{
+                width: 32px;
+                height: 32px;
+                background-color: transparent;
+                border: solid 0 transparent;
+                &:before{
+                    content: "x";
+                    font-size: 24px;
+                    color: $white;
+                    line-height: 24px;
+                    font-weight: 600;
+                    vertical-align: middle;
+                }
+            }
+        }
+        .aside-body{
+            padding: 16px;
+            .aside-type{
+                margin-bottom: 16px;
+                font-weight: 500;
+            }
+            .dropdown-input{
+                display: flex;
+                input{
+                    width: calc(100% - 80px);
+                    border-radius: 0 8px 8px 0;
+                }
+                .dropdown-button-and-list.lenguage-selector{
+                    width: 80px;
+                    button{
+                        padding: 8px 12px;
+                        border: solid 1px $lightgrey;
+                        border-radius: 8px 0 0 8px;
+                        text-align: left;
+                    }
+                    &.show{
+                        button{
+                            border-radius: 8px 0 0 0;
+                        }
+                    }
+                }
+            }
+            .checkbox-label{
+                display: flex;
+                gap: 12px;
+                label{
+                    margin-bottom: 0;
+                }
+            }
+            .advance-configuration{
+                border-top: solid 1px $black;
+                padding-top: 8px;
+                margin-top: 8px;
+                .title-and-button{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 8px;
+                    label{
+                        margin-bottom: 0;
+                        font-size: 20px;
+                        font-weight: 600;
+                        line-height: 30px;
+                    }
+                    button{
+                        border: solid 0 transparent;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 4px;
+                        font-size: 20px;
+                        color: $white;
+                        background-color: $black;
+                        cursor: pointer;
+                    }
+                }
+                h4{
+                    font-weight: 600;
+                    margin-bottom: 8px;
+                    font-size: 15px;
+                }
+                fieldset{
+                    display: flex;
+                    gap: 12px;
+                    label{
+                        margin-bottom: 0;
+                        font-weight: 400;
+                    }
+                }
+            }
+            .selector-categoria{
+                border-top: solid 1px $black;
+                padding-top: 8px;
+                margin-top: 8px;
+                h2{
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 30px;
+                }
+            }
+        }
+        .aside-footer{
+            padding: 16px;
+            button{
+                background-color: $black;
+                display: block;
+                padding: 16px;
+                color: $white;
+                border: solid 0 transparent;
+                width: 100%;
+                cursor: pointer;
+                &:hover{
+                    background-color: red;
+                }
+            }
+        }
+    }
+}
+
+select {
+    width: 100%;
+    padding: 8px 12px;
+    background: url("https://www.futbolred.com/assets/images/btn-apuestas.svg") no-repeat center right 10px/20px;
+    cursor: pointer;
+}

@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="desing-system.css">
+</head>
+<body>
+    <div class="dropdown">
+        <div class="dropdown-button-and-list" id="aside-selector-category">
+            <button onclick="mostrarOpciones('#aside-selector-category')">Todos</button>
+            <ul>
+                <li>Todos</li>
+                <li>Mobile</li>
+                <li>Escritorio</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>     
+        function mostrarOpciones(componente) {
+            var element = document.querySelector(componente);
+            element.classList.toggle("show");
+        }
+    </script>
+</body>
+</html>

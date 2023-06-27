@@ -1,0 +1,177 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div ng-app="editorSitio" class="ng-scope">
+        <!-- -------------------- cambiar nombre de la clase a header -------------------- -->
+        <div class="header">
+
+        </div>
+        <!-- -------------------- final header -------------------- -->
+
+        <!-- -------------------- container -------------------- -->
+        <div class="container">
+
+        </div>
+        <!-- -------------------- final container -------------------- -->
+
+        <!-- -------------------- sacar de container al footer -------------------- -->
+        <div class="footer">
+
+        </div>
+        <!-- -------------------- final footer -------------------- -->
+
+        <!-- -------------------- menu -------------------- -->
+        <div class="menu">
+
+        </div>
+        <!-- -------------------- final menu -------------------- -->
+
+    </div>
+    <!-- -------------------- 
+    aside
+    validar si se puede quitar el aside-dialog 
+    -------------------- -->
+    <aside class="aside-dialog">
+        <div class="aside-content">
+            <div class="aside-header">
+                <h3 class="aside-tittle">Configuración del componente</h3>
+                <button class="close"></button>
+            </div>
+            <div class="aside-body">
+                <h4 class="aside-type">
+                    <b>Tipo:</b>
+                    <span>Lista_items</span>
+                </h4>
+                <form action="#">
+                    <fieldset class="parametro-modulo">
+                        <label>Titulo</label>
+                        <div class="dropdown-input">
+                            <div class="dropdown-button-and-list lenguage-selector" id="aside-lenguage-options">
+                                <button onclick="mostrarOpciones('#aside-lenguage-options')">es</button>
+                                <ul>
+                                    <li>es</li>
+                                    <li>en</li>
+                                    <li>fr</li>
+                                </ul>
+                            </div>
+                            <input type="text" class="form-control">
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="parametro-modulo">
+                        <label>Titulo</label>
+                        <input type="text" class="form-control">
+                    </fieldset>
+
+                    <fieldset class="parametro-modulo">
+                        <label>Fecha de Publicacion</label>
+                        <input type="datetime-local" class="form-control">
+                    </fieldset>
+
+                    <fieldset class="parametro-modulo">
+                        <label>Fecha de Publicacion</label>
+                        <input type="datetime-local" class="form-control">
+                    </fieldset>
+
+                    <fieldset class="checkbox-label">
+                        <input type="checkbox" class="">
+                        <label>Usar librería Swiper</label>
+                    </fieldset>
+
+                    <fieldset class="parametro-modulo">
+                        <label>Opciones librería Swiper *</label>
+                        <textarea></textarea>
+                    </fieldset>
+
+                    <div class="parametro-modulo advance-configuration">
+                        <div class="title-and-button">
+                            <label class="">
+                                Configuración Avanzada
+                            </label>
+                            <button>+</button>
+                        </div>
+                        <div class="filtros-disponibles">
+                            <h4>Filtros disponibles</h4>
+                            <fieldset>
+                                <input type="checkbox" class="">
+                                <label>Evento</label>
+                            </fieldset>
+                            <fieldset>
+                                <input type="checkbox" class="">
+                                <label>Organización</label>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <fieldset>
+                        <label>Estado</label>
+                        <select name="" id="">
+                            <option value="string:todos">Todos</option>
+                            <option value="string:mobile">Mobile</option>
+                            <option value="string:desktop">EScritorio</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <label>Dispositivos</label>
+                        <select name="" id="">
+                            <option value="string:todos">Todos</option>
+                            <option value="string:mobile">Mobile</option>
+                            <option value="string:desktop">EScritorio</option>
+                        </select>
+                    </fieldset>
+
+
+                    <div class="selector-categoria">
+                        <h2>
+                            Seleccione la categoría
+                        </h2>
+                        <fieldset>
+                            <label>Sección</label>
+                            <select name="" id="">
+                                <option value="string:todos">Todos</option>
+                                <option value="string:mobile">Mobile</option>
+                                <option value="string:desktop">EScritorio</option>
+                            </select>
+                        </fieldset>
+
+                        <fieldset>
+                            <label>Categoría</label>
+                            <div class="dropdown-input">
+                                <div class="dropdown-button-and-list" id="aside-selector-category">
+                                    <button onclick="mostrarOpciones('#aside-selector-category')">Todos</button>
+                                    <ul>
+                                        <li>Todos</li>
+                                        <li>Mobile</li>
+                                        <li>Escritorio</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <label for="">Item</label>
+                            <select name="" id="">
+                                <option value="string:todos">Todos</option>
+                                <option value="string:mobile">Mobile</option>
+                                <option value="string:desktop">EScritorio</option>
+                            </select>
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+            <div class="aside-footer">
+                <button>Guardar</button>
+            </div>
+        </div>
+    </aside>
+    <!-- -------------------- final aside -------------------- -->
+    <script src="editor.js"></script>
+</body>
+
+</html>
